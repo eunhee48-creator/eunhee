@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI리터러시지도사 박은희 - AI리터러시, 목공, 콘텐츠기획·제작, 온라인마케팅 실습형 교육">
+<title>박은희 | AI리터러시 · 목공 · 콘텐츠 · 온라인마케팅</title>
+<style>
+:root{
+  --ivory:#f7f3ea; --paper:#fffdf8; --ink:#26302c; --muted:#6f756f;
+  --wood:#7b4d32; --wood2:#a8754d; --green:#173d35; --navy:#182b35;
+  --gold:#c49a54; --line:rgba(38,48,44,.12); --shadow:0 22px 60px rgba(52,39,25,.13);
+  --radius:26px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Pretendard","Noto Sans KR",Arial,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65}
+a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+.nav{position:fixed;z-index:50;top:16px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 28px));
+display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:rgba(255,253,248,.82);
+backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:0 10px 30px rgba(38,48,44,.08)}
+.brand{font-weight:900;letter-spacing:-.04em}.brand small{display:block;font-size:10px;letter-spacing:.13em;color:var(--wood)}
+nav{display:flex;gap:5px}nav a{padding:8px 11px;border-radius:12px;font-size:13px;font-weight:700;color:#4c5550}nav a:hover{background:#eee7da}
+.hero{min-height:92vh;display:grid;align-items:center;padding:140px 0 80px;position:relative;overflow:hidden;
+background:radial-gradient(circle at 78% 28%,rgba(196,154,84,.18),transparent 28%),linear-gradient(135deg,#fffdf8 0%,#f1eadc 100%)}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;bottom:-220px;background:rgba(23,61,53,.07)}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center}
+.kicker{display:inline-flex;gap:8px;align-items:center;color:var(--wood);font-weight:900;font-size:13px;letter-spacing:.08em}
+.kicker:before{content:"";width:28px;height:2px;background:var(--gold)}
+h1{font-size:clamp(42px,6vw,78px);line-height:1.08;letter-spacing:-.065em;margin:18px 0 22px;color:var(--green)}
+h1 em{font-style:normal;color:var(--wood)}
+.lead{font-size:clamp(17px,2vw,21px);color:#4e5752;max-width:640px;letter-spacing:-.025em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{padding:14px 20px;border-radius:14px;font-weight:900;border:1px solid var(--line);box-shadow:0 9px 22px rgba(0,0,0,.07)}
+.primary{background:var(--green);color:white}.secondary{background:rgba(255,255,255,.75)}
+.hero-art{min-height:500px;border-radius:36px;position:relative;overflow:hidden;background:
+linear-gradient(145deg,rgba(23,61,53,.96),rgba(17,35,40,.96));box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.35)}
+.hero-art:before{content:"";position:absolute;inset:20px;border:1px solid rgba(255,255,255,.18);border-radius:28px}
+.wood-panel{position:absolute;width:62%;height:62%;right:8%;top:15%;border-radius:18px;transform:rotate(5deg);
+background:repeating-linear-gradient(4deg,#9a6847 0 5px,#a97650 6px 11px,#89583c 12px 15px);box-shadow:18px 22px 45px rgba(0,0,0,.28)}
+.wood-panel:after{content:"AI  ×  CRAFT";position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,249,235,.85);
+font-weight:900;font-size:clamp(22px,3vw,40px);letter-spacing:.08em;transform:rotate(-5deg)}
+.tool{position:absolute;left:11%;bottom:12%;width:44%;height:17%;border-radius:18px;background:linear-gradient(160deg,#d9c8a8,#a88761);
+transform:rotate(-12deg);box-shadow:0 16px 30px rgba(0,0,0,.25)}
+.tool:after{content:"";position:absolute;width:58%;height:8px;right:-28%;top:46%;background:#c49a54;border-radius:9px;transform:rotate(5deg)}
+.art-label{position:absolute;left:34px;bottom:30px;color:white}.art-label strong{font-size:22px}.art-label span{display:block;color:#d9e3df;font-size:13px}
+section{padding:105px 0}.section-head{max-width:720px;margin-bottom:42px}.eyebrow{font-size:12px;color:var(--wood);font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h2{font-size:clamp(32px,4.3vw,52px);line-height:1.15;letter-spacing:-.055em;margin:10px 0 14px;color:var(--green)}
+.section-head p{margin:0;color:var(--muted);font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:rgba(255,253,248,.9);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 14px 40px rgba(58,43,28,.08);position:relative;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.card:after{content:"";position:absolute;width:110px;height:110px;right:-45px;top:-45px;border-radius:50%;background:rgba(196,154,84,.13)}
+.num{font-size:12px;font-weight:900;color:var(--gold)}.card h3{margin:10px 0 7px;font-size:22px;letter-spacing:-.04em}.card p{color:var(--muted);font-size:14px;margin:0}
+.dark{background:var(--green);color:white}.dark h2,.dark h3{color:white}.dark .section-head p,.dark .card p{color:#cbd8d2}.dark .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.13)}
+.program{display:grid;grid-template-columns:1fr 1.35fr;gap:35px;align-items:start}
+.program-list{display:grid;gap:12px}.program-item{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:center;padding:18px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#eee5d7;color:var(--wood);font-size:23px}
+.program-item strong{display:block}.program-item span{font-size:13px;color:var(--muted)}
+.quote{padding:34px;border-radius:28px;background:linear-gradient(145deg,#f0e4d3,#fffdf8);border:1px solid var(--line);box-shadow:var(--shadow)}
+.quote p{font-size:clamp(24px,3.2vw,38px);font-weight:900;line-height:1.3;letter-spacing:-.055em;color:var(--green);margin:0}.quote small{display:block;margin-top:20px;color:var(--wood);font-weight:800}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{text-align:center;padding:25px 12px;border-radius:20px;background:#fffdf8;border:1px solid var(--line);position:relative}.step:not(:last-child):after{content:"→";position:absolute;right:-15px;top:50%;transform:translateY(-50%);color:var(--gold);font-weight:900;font-size:22px;z-index:2}.step b{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 10px;border-radius:50%;background:var(--green);color:white}.step span{font-weight:900;font-size:14px}
+.audience{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.aud{min-height:150px;padding:25px;border-radius:24px;background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 35px rgba(58,43,28,.07)}.aud b{font-size:18px}.aud p{margin:8px 0 0;color:var(--muted);font-size:14px}
+.profile{display:grid;grid-template-columns:.75fr 1.25fr;gap:40px;align-items:center}.portrait{min-height:430px;border-radius:32px;background:linear-gradient(150deg,#c8b08c,#8a6246);position:relative;overflow:hidden;box-shadow:var(--shadow)}.portrait:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#e6c6a3;left:50%;top:25%;transform:translate(-50%,-50%);box-shadow:0 180px 0 55px #4b3429}.portrait:after{content:"PARK EUN-HEE";position:absolute;bottom:25px;left:25px;color:white;font-weight:900;letter-spacing:.12em}
+.profile ul{padding-left:20px;color:var(--muted)}.profile li{margin:7px 0}
+.cta{padding:70px 0 90px}.cta-box{border-radius:34px;padding:60px;background:linear-gradient(135deg,var(--green),#244f44);color:white;box-shadow:var(--shadow);position:relative;overflow:hidden}.cta-box:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-100px;top:-130px;border:70px solid rgba(196,154,84,.16)}
+.cta-box h2{color:white;max-width:760px}.cta-box p{color:#d4dfda;max-width:650px}.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.contact div{padding:17px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}.contact b{display:block;font-size:12px;color:#d7b36c}.contact span{font-size:15px}
+footer{padding:30px 0 45px;color:#777;font-size:12px;border-top:1px solid var(--line)}
+.top{position:fixed;right:22px;bottom:22px;z-index:60;border:0;border-radius:15px;padding:12px 14px;background:var(--green);color:white;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.2);cursor:pointer;opacity:0;transform:translateY(10px);transition:.2s}.top.show{opacity:1;transform:none}.top:hover{background:var(--wood)}
+@media(max-width:900px){
+ nav{display:none}.hero-grid,.program,.profile{grid-template-columns:1fr}.hero{padding-top:120px}.hero-art{min-height:380px}
+ .cards{grid-template-columns:repeat(2,1fr)}.audience{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr}
+ .step:not(:last-child):after{content:"↓";right:auto;top:auto;bottom:-19px;left:50%;transform:translateX(-50%)}
+}
+@media(max-width:560px){
+ .wrap{width:min(100% - 26px,1180px)}section{padding:75px 0}.hero{padding:105px 0 60px}.hero-art{min-height:330px}
+ .cards,.audience,.contact{grid-template-columns:1fr}.card{padding:23px}.cta-box{padding:38px 25px}.top{right:14px;bottom:14px}
+ h1{font-size:45px}.lead{font-size:16px}.btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top">박은희<small>EDUCATION · CREATIVE · DIGITAL</small></a>
+  <nav>
+    <a href="#fields">전문분야</a><a href="#programs">교육프로그램</a><a href="#process">교육방식</a><a href="#profile">강사소개</a><a href="#contact">출강문의</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="kicker">AI LITERACY · WOODCRAFT · CONTENT · MARKETING</div>
+   <h1>배우고,<br><em>직접 만들고</em>,<br>활용하는 교육</h1>
+   <p class="lead">AI리터러시지도사 박은희. AI를 쉽게 배우고, 손으로 만들고, 콘텐츠로 표현하고, 온라인에서 연결할 수 있도록 돕는 실습형 교육을 진행합니다.</p>
+   <div class="btns"><a class="btn primary" href="#contact">교육·출강 문의</a><a class="btn secondary" href="#fields">전문분야 보기</a></div>
+  </div>
+  <div class="hero-art" aria-label="AI와 공예를 연결한 추상적 교육 비주얼">
+   <div class="wood-panel"></div><div class="tool"></div>
+   <div class="art-label"><strong>AI × CRAFT</strong><span>아이디어를 만들고, 결과물로 완성합니다.</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="fields">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Specialties</div><h2>서로 다른 분야를<br>하나의 교육 경험으로</h2><p>AI와 디지털 활용부터 목공·공예 체험, 콘텐츠 제작과 온라인마케팅까지. 대상과 목적에 맞춰 실습 중심으로 설계합니다.</p></div>
+  <div class="cards">
+   <article class="card"><div class="num">01</div><h3>AI리터러시</h3><p>생성형 AI의 이해부터 ChatGPT 활용, 업무·교육·콘텐츠 실습까지.</p></article>
+   <article class="card"><div class="num">02</div><h3>목공 · 공예</h3><p>나무와 재료를 직접 만지고 만들며 창의성과 성취감을 경험하는 체험교육.</p></article>
+   <article class="card"><div class="num">03</div><h3>콘텐츠 기획·제작</h3><p>아이디어를 글·이미지·영상 등 실제 홍보 콘텐츠로 완성하는 교육.</p></article>
+   <article class="card"><div class="num">04</div><h3>온라인마케팅</h3><p>소상공인과 자영업자가 바로 적용할 수 있는 SNS·콘텐츠 마케팅 실습.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="programs">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Programs</div><h2>대상과 현장에 맞춘<br>실무형 교육 프로그램</h2><p>소상공인·중소기업·공공기관·학교·청소년·성인학습자 등 교육 목적에 맞춰 프로그램을 구성합니다.</p></div>
+  <div class="program">
+   <div class="program-list">
+    <div class="program-item"><div class="icon">AI</div><div><strong>AI리터러시 · 생성형 AI</strong><span>기초 이해 → 질문 → 활용 → 결과물</span></div></div>
+    <div class="program-item"><div class="icon">▰</div><div><strong>목공 · 가죽 · 공예 체험</strong><span>재료 이해 → 제작 → 완성 → 작품 공유</span></div></div>
+    <div class="program-item"><div class="icon">✦</div><div><strong>콘텐츠 기획·제작</strong><span>아이디어 → 기획 → 제작 → 게시</span></div></div>
+    <div class="program-item"><div class="icon">↗</div><div><strong>온라인마케팅</strong><span>고객 이해 → 콘텐츠 → 채널 → 홍보</span></div></div>
+   </div>
+   <div class="quote"><p>“배운 것을 바로 써보고,<br>내가 만든 결과물을<br>가져가는 수업.”</p><small>설명 · 시연 · 개별 실습 · 결과 공유</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="process">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Learning Process</div><h2>강의실에서 끝나지 않는<br>실습 중심 교육</h2><p>어려운 개념은 쉽게 설명하고, 강사의 시연을 본 뒤 직접 따라 하고 자신의 상황에 응용하도록 구성합니다.</p></div>
+  <div class="process">
+   <div class="step"><b>1</b><span>쉽게 이해하기</span></div><div class="step"><b>2</b><span>강사 시연 보기</span></div><div class="step"><b>3</b><span>직접 따라 하기</span></div><div class="step"><b>4</b><span>내 것으로 응용하기</span></div><div class="step"><b>5</b><span>결과 공유하기</span></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">For Learners</div><h2>이런 교육 현장과<br>함께합니다</h2></div>
+  <div class="audience">
+   <div class="aud"><b>소상공인 · 자영업자</b><p>AI 활용, 콘텐츠 제작, 온라인 홍보와 마케팅 실습</p></div>
+   <div class="aud"><b>중소기업</b><p>업무 효율화와 생성형 AI·콘텐츠 활용 교육</p></div>
+   <div class="aud"><b>공무원 · 공공기관</b><p>디지털·AI 활용 역량과 실무형 교육</p></div>
+   <div class="aud"><b>사서 · 교사</b><p>교육 현장에서 바로 활용하는 AI·콘텐츠 수업</p></div>
+   <div class="aud"><b>청소년</b><p>AI 리터러시와 창의적 콘텐츠·창작 활동</p></div>
+   <div class="aud"><b>유·초등 · 성인</b><p>쉽고 즐겁게 참여하는 체험·창작 중심 프로그램</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="profile">
+ <div class="wrap profile">
+  <div class="portrait" aria-label="강사 프로필 이미지 영역"></div>
+  <div>
+   <div class="eyebrow">Instructor</div><h2>AI리터러시지도사<br>박은희</h2>
+   <p style="color:#d4dfda;font-size:17px">어려운 기술을 쉽게 설명하고, 학습자가 직접 만들어보는 실습형 교육을 지향합니다.</p>
+   <ul>
+    <li>AI리터러시 · 생성형 AI 활용</li>
+    <li>목공 · 가죽 · 공예 · 체험교육</li>
+    <li>콘텐츠 기획·제작 · 온라인마케팅</li>
+    <li>소상공인·중소기업·공공기관·학교·청소년·성인 대상 교육</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="cta" id="contact">
+ <div class="wrap">
+  <div class="cta-box">
+   <div class="eyebrow">Contact</div>
+   <h2>우리 기관에 맞는 교육을<br>함께 설계해보세요.</h2>
+   <p>교육 대상, 인원, 시간, 장소와 목적에 맞춰 AI·목공·공예·콘텐츠·마케팅 프로그램을 상담합니다.</p>
+   <div class="contact">
+    <div><b>교육 분야</b><span>AI · 목공 · 공예 · 콘텐츠 · 마케팅</span></div>
+    <div><b>교육 대상</b><span>기업 · 기관 · 학교 · 성인 · 청소년</span></div>
+    <div><b>문의</b><span>출강·협업·프로그램 상담</span></div>
+   </div>
+   <div class="btns"><a class="btn" style="background:#fff;color:var(--green)" href="mailto:강사이메일을입력하세요">출강 문의하기</a></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">© Park Eun-hee. AI Literacy · Woodcraft · Creative Content · Online Marketing.</div></footer>
+<button class="top" id="topBtn" aria-label="맨 위로">↑ 맨 위</button>
+<script>
+const topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>450));
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+ const el=document.querySelector(a.getAttribute('href')); if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+}));
+</script>
+</body>
+</html>
